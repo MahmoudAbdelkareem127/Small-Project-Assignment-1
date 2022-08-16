@@ -135,7 +135,8 @@ case 5: cin.ignore();
         getline(cin,barCode);
         deleteItems(barCode); break;
 case 6: quit=false;    break;
-default: cout<<"You Enterd an invalid Option..";cin.get();cin.get();
+default: cin.ignore();
+	cout<<"You Enterd an invalid Option..";cin.get();cin.get();
 break;
 }
 cin.get();
