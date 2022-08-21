@@ -100,7 +100,18 @@ for(int x=0; x<maxrow;x++){
 	break;
 }
 }
-
+//not coping data
+void openSavedData(){
+	ofstream myfile;
+	myfile.open("C:\\data.text");
+	for(int x=0 ;x<maxrow;x++){
+	if(product[x]=="\0"){
+		break;
+	}else{
+		myfile << product[x] + "," +	quantity[x] <<endl;
+	}	
+		
+	}
 int main() {
 bool quit=true;
 do {
@@ -141,6 +152,7 @@ break;
 }
 cin.get();
 }while(quit);
+openSavedData();
 cout<<"Thank you.. ";
 cin.get();
 }
